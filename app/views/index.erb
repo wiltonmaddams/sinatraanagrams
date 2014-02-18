@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Anagram Search</h1>
+
+  <form action="/" method="post">
+    <input type="text" name="word">
+    <input type="submit" value="Submit">
+  </form>
+
+  <% if @words != nil %>
+    <h3>Anagrams for: <%= @word %></h3>
+    <ul>
+      <% @words.each do |word| %>
+        <li><%= word %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
